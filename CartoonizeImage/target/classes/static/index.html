@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+    <title>Cartoonize your image</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+            text-align: center;
+        }
+        #head{
+            background-color: rgb(182, 103, 255);
+            color: rgb(30, 0, 99);
+            margin: 1px;
+            padding: 10px;
+            border-bottom: rgb(75, 38, 109);
+            border-bottom-width: 4px;
+            border-bottom-style: solid;
+
+        }
+        #submit{
+            padding: 8px;
+            background-color: rgb(75, 38, 109);
+            border-radius: 8px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="head">
+        <h2>Cartoonize your image</h2>
+    </div>
+    <br>
+    <br>
+    
+    <label>Choose image</label>
+    <input id="ajaxfile" type="file"/><br><br>
+    <button id="submit" onclick="uploadFile()">Submit</button><br><br>
+    <p id="outputimage"><img ></p>
+
+    <a href="path" download="file">Download</a>
+
+    <script>
+        async function uploadFile() {
+          let formData = new FormData(); 
+          formData.append("file", ajaxfile.files[0]);
+          await fetch('image/process', {
+            headers: {"Content-Type":"multipart/form-data; boundary=<calculated when request is sent>"},
+            method: "POST", 
+            body: formData
+          }).then(response => response.json);
+          document.getElementById('outputimage').innerHTML = "file";
+          alert('The file upload with Ajax and Java was a success!');
+        }
+    </script>
+</body>
+</html>
