@@ -1,3 +1,9 @@
 # GenerateImageOutline
 
-A maven application that takes an image of any format as input and uses the OpenCV library binding using Java to manipulate and generate the output image. 
+This project provides a simple web application for converting an image to a black and white cartoonized version. The backend is implemented in Java using the OpenCV library for image processing, and the frontend is designed as a basic HTML web page with JavaScript for handling file uploads.
+
+## Usage
+- Choose an image file by clicking the "Choose image" button.
+- Click the "Submit" button to process the selected image.
+- The processed image will be displayed on the page.
+- Optionally, you can download the cartoonized image by clicking the "Download" link.
