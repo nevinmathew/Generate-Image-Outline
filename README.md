@@ -24,7 +24,7 @@ This project provides a simple web application for converting an image to a blac
             <td>
                 <p align="left">
                     <a href="https://maven.apache.org/" target="_blank" rel="noreferrer">
-                        <img src="https://icons-for-free.com/iconfiles/png/512/vscode+icons+type+maven-1324451386617447973.png" title="Maven" alt="Maven" width="40" height="40"/>
+                        <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_maven_icon_130397.png" title="Maven" alt="Maven" width="40" height="40"/>
                     </a>
                 </p>
             </td>
